@@ -1,0 +1,1676 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>传送门下载_官方品牌站,品质内容与工具社区</title>
+<meta name="description" content="传送门下载官方网站，专注传送门下载相关的视频内容、工具教程与创作者社区，提供高品质原创内容与企业级服务。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1b2a'/%3E%3Cpath d='M18 14h16a14 14 0 0 1 0 28H26v8h-8z' fill='%2332e0c8'/%3E%3Ccircle cx='34' cy='28' r='6' fill='%230d1b2a'/%3E%3C/svg%3E">
+<style>
+:root{
+  --pt-ink:#0d1b2a;
+  --pt-ink-soft:#1b2f45;
+  --pt-line:rgba(19,42,66,.12);
+  --pt-cyan:#12b8a6;
+  --pt-cyan-deep:#0a8d80;
+  --pt-lime:#b6f36b;
+  --pt-bg:#f4f7f8;
+  --pt-card:#ffffff;
+  --pt-muted:#5a6b7a;
+  --pt-radius:18px;
+  --pt-shadow:0 10px 30px rgba(13,27,42,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:132px}
+body{
+  margin:0;
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,sans-serif;
+  background:var(--pt-bg);
+  color:var(--pt-ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:800}
+p{margin:0 0 1em}
+ul{margin:0;padding:0;list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.pt-wrap{width:min(1180px,92vw);margin:0 auto}
+
+/* ===== 吸顶头部 ===== */
+.pt-sticky{position:sticky;top:0;z-index:80}
+.pt-notice{
+  background:linear-gradient(90deg,#0d1b2a,#16394f 55%,#0f5b57);
+  color:#e7fbf7;
+  font-size:13px;
+  overflow:hidden;
+}
+.pt-notice-inner{display:flex;align-items:center;gap:14px;height:38px}
+.pt-notice-badge{
+  flex:none;background:var(--pt-lime);color:#0d1b2a;
+  font-weight:800;font-size:11px;letter-spacing:.12em;
+  padding:2px 8px;border-radius:5px;
+}
+.pt-notice-track{flex:1;overflow:hidden;white-space:nowrap}
+.pt-notice-list{display:inline-flex;gap:44px;animation:pt-marquee 34s linear infinite}
+.pt-notice-list li{display:inline-block;opacity:.92}
+.pt-notice-list li b{color:var(--pt-lime);font-weight:700}
+@keyframes pt-marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+.pt-header{
+  background:rgba(244,247,248,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--pt-line);
+}
+.pt-header-inner{display:flex;align-items:center;gap:26px;height:68px}
+.pt-logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:19px;letter-spacing:.02em}
+.pt-logo-mark{
+  width:34px;height:34px;border-radius:10px;flex:none;
+  background:linear-gradient(140deg,#12b8a6,#0a8d80);
+  display:grid;place-items:center;color:#fff;font-size:16px;font-weight:900;
+  box-shadow:0 6px 16px rgba(18,184,166,.34);
+}
+.pt-nav{display:flex;gap:4px;margin-left:6px}
+.pt-nav a{
+  padding:8px 12px;border-radius:9px;font-size:14.5px;color:#33475a;font-weight:600;
+  transition:background .2s,color .2s;
+}
+.pt-nav a:hover{background:rgba(18,184,166,.12);color:var(--pt-cyan-deep)}
+.pt-search{
+  margin-left:auto;display:flex;align-items:center;gap:8px;
+  background:#fff;border:1px solid var(--pt-line);border-radius:12px;
+  padding:6px 8px 6px 12px;width:250px;transition:box-shadow .2s,border-color .2s;
+}
+.pt-search:focus-within{border-color:var(--pt-cyan);box-shadow:0 0 0 4px rgba(18,184,166,.14)}
+.pt-search input{border:none;outline:none;flex:1;font-size:13.5px;background:transparent;color:var(--pt-ink);min-width:0}
+.pt-search button{
+  background:var(--pt-ink);color:#fff;border-radius:8px;
+  font-size:12.5px;font-weight:700;padding:5px 11px;
+}
+.pt-search-tip{
+  position:absolute;top:112px;right:calc(50vw - 590px);
+  background:#0d1b2a;color:#d7fbf5;font-size:12.5px;
+  padding:8px 14px;border-radius:9px;opacity:0;pointer-events:none;
+  transform:translateY(-6px);transition:.25s;z-index:90;max-width:320px;
+}
+.pt-search-tip.is-on{opacity:1;transform:translateY(0)}
+.pt-burger{display:none;width:42px;height:42px;border-radius:10px;background:#fff;border:1px solid var(--pt-line);margin-left:auto}
+.pt-burger span{display:block;width:18px;height:2px;background:var(--pt-ink);margin:4px auto;border-radius:2px;transition:.25s}
+.pt-mobile-nav{display:none;background:#fff;border-bottom:1px solid var(--pt-line)}
+.pt-mobile-nav.is-open{display:block}
+.pt-mobile-nav a{display:block;padding:12px 4vw;border-bottom:1px dashed var(--pt-line);font-size:15px;font-weight:600}
+
+/* ===== 首屏 ===== */
+.pt-hero{padding:54px 0 46px;position:relative;overflow:hidden}
+.pt-hero::before{
+  content:"";position:absolute;right:-160px;top:-120px;width:520px;height:520px;border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,rgba(18,184,166,.22),transparent 68%);
+  pointer-events:none;
+}
+.pt-hero-grid{display:grid;grid-template-columns:5.2fr 4.8fr;gap:48px;align-items:center}
+.pt-kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:800;
+  letter-spacing:.1em;color:var(--pt-cyan-deep);background:rgba(18,184,166,.12);
+  padding:6px 14px;border-radius:99px;margin-bottom:18px;
+}
+.pt-kicker i{width:6px;height:6px;border-radius:50%;background:var(--pt-cyan);display:block}
+.pt-h1{font-size:clamp(38px,5.4vw,62px);letter-spacing:-.02em}
+.pt-h1 em{
+  font-style:normal;
+  background:linear-gradient(100deg,#0a8d80,#12b8a6 45%,#7fd94a);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.pt-hero-sub{font-size:17px;color:#3c5064;margin-top:16px;font-weight:600}
+.pt-hero-desc{color:var(--pt-muted);font-size:15px;margin-top:14px;max-width:560px}
+.pt-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.pt-btn{
+  display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:12px;
+  font-size:14.5px;font-weight:800;transition:transform .18s,box-shadow .18s,background .18s;
+}
+.pt-btn-main{background:var(--pt-ink);color:#fff;box-shadow:0 12px 26px rgba(13,27,42,.22)}
+.pt-btn-main:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(13,27,42,.28)}
+.pt-btn-ghost{background:#fff;color:var(--pt-ink);border:1px solid var(--pt-line)}
+.pt-btn-ghost:hover{transform:translateY(-2px);border-color:var(--pt-cyan)}
+.pt-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
+.pt-stat{
+  background:#fff;border:1px solid var(--pt-line);border-radius:14px;
+  padding:14px 16px;box-shadow:var(--pt-shadow);
+}
+.pt-stat b{display:block;font-size:23px;letter-spacing:-.02em}
+.pt-stat b span{color:var(--pt-cyan-deep);font-size:14px;margin-left:2px}
+.pt-stat small{font-size:12.5px;color:var(--pt-muted);font-weight:600}
+
+.pt-hero-visual{position:relative}
+.pt-hero-frame{
+  border-radius:26px;overflow:hidden;position:relative;
+  box-shadow:0 30px 60px rgba(13,27,42,.20);
+  border:1px solid rgba(255,255,255,.6);
+}
+.pt-hero-frame svg{width:100%;height:auto;display:block}
+.pt-hero-play{
+  position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;
+}
+.pt-hero-play i{
+  width:74px;height:74px;border-radius:50%;background:rgba(255,255,255,.9);
+  display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.25);
+  animation:pt-pulse 2.6s ease-in-out infinite;
+}
+.pt-hero-play i::after{
+  content:"";border-left:20px solid var(--pt-ink);
+  border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:6px;
+}
+@keyframes pt-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+.pt-hero-tag{
+  position:absolute;left:18px;bottom:18px;background:rgba(13,27,42,.82);color:#eafffb;
+  font-size:12.5px;font-weight:700;padding:7px 13px;border-radius:8px;backdrop-filter:blur(6px);
+}
+.pt-hero-chip{
+  position:absolute;right:-10px;top:26px;background:#fff;border-radius:14px;
+  padding:10px 16px;box-shadow:0 14px 30px rgba(13,27,42,.16);
+  font-size:12.5px;font-weight:800;color:var(--pt-ink);transform:rotate(3deg);
+}
+.pt-hero-chip span{color:var(--pt-cyan-deep)}
+
+/* ===== 通用 section ===== */
+.pt-section{padding:64px 0;position:relative}
+.pt-section-head{max-width:780px;margin-bottom:34px}
+.pt-h2{font-size:clamp(25px,3.1vw,34px);letter-spacing:-.01em}
+.pt-h2 .pt-mark{color:var(--pt-cyan-deep)}
+.pt-section-head p{color:var(--pt-muted);font-size:15px;margin-top:10px;margin-bottom:0}
+.pt-eyebrow{
+  font-size:12px;font-weight:900;letter-spacing:.16em;color:var(--pt-cyan-deep);
+  display:block;margin-bottom:8px;
+}
+
+/* 解析长文 */
+.pt-about{background:#fff;border-top:1px solid var(--pt-line);border-bottom:1px solid var(--pt-line)}
+.pt-about-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.pt-about-grid article p{color:#3b4f61;font-size:15px}
+.pt-about-grid article h3{font-size:18px;margin:22px 0 8px}
+.pt-about-grid article h3:first-child{margin-top:0}
+.pt-pillbox{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.pt-pill{
+  font-size:12.5px;font-weight:700;color:var(--pt-ink-soft);
+  background:rgba(18,184,166,.10);border:1px solid rgba(18,184,166,.24);
+  padding:5px 12px;border-radius:99px;
+}
+
+/* 焦点视频 */
+.pt-focus-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:22px}
+.pt-card{
+  background:var(--pt-card);border-radius:var(--pt-radius);overflow:hidden;
+  border:1px solid var(--pt-line);transition:transform .22s,box-shadow .22s;
+  display:flex;flex-direction:column;
+}
+.pt-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(13,27,42,.14)}
+.pt-cover{position:relative;aspect-ratio:16/9;overflow:hidden;background:#0d1b2a}
+.pt-cover svg{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.pt-card:hover .pt-cover svg{transform:scale(1.05)}
+.pt-cover-label{
+  position:absolute;top:12px;left:12px;z-index:2;
+  background:rgba(13,27,42,.72);color:#d9fff8;font-size:11.5px;font-weight:800;
+  padding:4px 10px;border-radius:6px;backdrop-filter:blur(4px);
+}
+.pt-cover-tri{
+  position:absolute;inset:0;z-index:1;display:grid;place-items:center;pointer-events:none;
+}
+.pt-cover-tri::after{
+  content:"";width:0;height:0;border-left:16px solid rgba(255,255,255,.92);
+  border-top:10px solid transparent;border-bottom:10px solid transparent;
+  margin-left:4px;filter:drop-shadow(0 3px 8px rgba(0,0,0,.4));
+}
+.pt-cover::after{
+  content:"";position:absolute;inset:auto 0 0 0;height:44%;z-index:1;
+  background:linear-gradient(transparent,rgba(9,20,32,.72));pointer-events:none;
+}
+.pt-focus-main .pt-card-body{padding:20px 22px 22px}
+.pt-focus-main h3{font-size:21px}
+.pt-focus-side{display:grid;gap:18px}
+.pt-mini{
+  display:grid;grid-template-columns:132px 1fr;gap:14px;background:#fff;
+  border:1px solid var(--pt-line);border-radius:14px;overflow:hidden;
+  transition:transform .2s,box-shadow .2s;
+}
+.pt-mini:hover{transform:translateX(4px);box-shadow:0 12px 26px rgba(13,27,42,.12)}
+.pt-mini .pt-cover{aspect-ratio:16/9;border-radius:0;height:100%}
+.pt-mini .pt-cover-tri::after{width:0;height:0;border-left:11px solid rgba(255,255,255,.9);border-top:7px solid transparent;border-bottom:7px solid transparent}
+.pt-mini-body{padding:12px 14px 12px 0;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.pt-mini-body h4{font-size:14.5px;line-height:1.45}
+.pt-mini-body small{font-size:12px;color:var(--pt-muted)}
+
+.pt-card-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.pt-card-title{font-size:16.5px;line-height:1.42}
+.pt-card-desc{font-size:13.5px;color:var(--pt-muted);margin:0;flex:1}
+.pt-card-meta{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--pt-muted);flex-wrap:wrap}
+.pt-mini-avatarset{
+  width:24px;height:24px;border-radius:50%;display:grid;place-items:center;flex:none;
+  font-size:11px;font-weight:900;color:#fff;background:linear-gradient(135deg,#12b8a6,#0a8d80);
+}
+.pt-tags{display:flex;flex-wrap:wrap;gap:6px}
+.pt-tag{
+  font-size:11.5px;font-weight:700;color:var(--pt-cyan-deep);
+  background:rgba(18,184,166,.10);padding:3px 9px;border-radius:6px;
+}
+.pt-actions{display:flex;align-items:center;gap:8px;margin-top:2px;flex-wrap:wrap}
+.pt-act{
+  display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;
+  color:#43586c;background:#f2f6f7;border-radius:8px;padding:5px 10px;transition:.18s;
+}
+.pt-act:hover{background:#e4eff1;color:var(--pt-ink)}
+.pt-act.is-liked{background:rgba(255,90,90,.12);color:#d9443f}
+.pt-act.is-saved{background:rgba(18,184,166,.14);color:var(--pt-cyan-deep)}
+.pt-act svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.pt-act.is-liked svg,.pt-act.is-saved svg{fill:currentColor}
+
+/* 视频流网格 */
+.pt-stream{background:linear-gradient(180deg,#f4f7f8,#eef4f5)}
+.pt-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.pt-chip{
+  font-size:13px;font-weight:700;padding:7px 16px;border-radius:99px;background:#fff;
+  border:1px solid var(--pt-line);color:#3c5064;transition:.18s;
+}
+.pt-chip:hover{border-color:var(--pt-cyan);color:var(--pt-cyan-deep)}
+.pt-chip.is-active{background:var(--pt-ink);color:#fff;border-color:var(--pt-ink)}
+.pt-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pt-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+
+/* 专题 */
+.pt-special-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pt-special{
+  border-radius:var(--pt-radius);overflow:hidden;position:relative;background:var(--pt-ink);
+  min-height:280px;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:24px;color:#fff;transition:transform .22s;
+}
+.pt-special:hover{transform:translateY(-5px)}
+.pt-special svg{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.pt-special::after{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(200deg,rgba(9,20,32,.10) 10%,rgba(9,20,32,.86));
+}
+.pt-special>*{position:relative;z-index:2}
+.pt-special-state{
+  align-self:flex-start;font-size:11.5px;font-weight:800;letter-spacing:.06em;
+  background:var(--pt-lime);color:#0d1b2a;padding:3px 10px;border-radius:5px;margin-bottom:12px;
+}
+.pt-special h3{font-size:19px;margin-bottom:6px}
+.pt-special p{font-size:13px;color:#c8dbe2;margin:0}
+
+/* 创作者 */
+.pt-creators{background:#fff;border-top:1px solid var(--pt-line);border-bottom:1px solid var(--pt-line)}
+.pt-creator-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pt-creator{
+  border:1px solid var(--pt-line);border-radius:var(--pt-radius);padding:20px;
+  display:flex;gap:14px;align-items:flex-start;transition:.2s;background:#fff;
+}
+.pt-creator:hover{border-color:var(--pt-cyan);transform:translateY(-4px);box-shadow:var(--pt-shadow)}
+.pt-avatar{
+  width:52px;height:52px;border-radius:16px;flex:none;display:grid;place-items:center;
+  font-size:20px;font-weight:900;color:#fff;
+}
+.pt-creator h3{font-size:16px;display:flex;align-items:center;gap:7px}
+.pt-creator h3 i{
+  font-style:normal;font-size:10px;font-weight:800;color:var(--pt-cyan-deep);
+  background:rgba(18,184,166,.14);padding:1px 6px;border-radius:4px;
+}
+.pt-creator .pt-field{font-size:12px;color:var(--pt-cyan-deep);font-weight:700;margin:2px 0 6px}
+.pt-creator p{font-size:13px;color:var(--pt-muted);margin:0 0 8px}
+.pt-creator .pt-figs{display:flex;gap:14px;font-size:12px;color:#42586b;font-weight:700}
+.pt-creator .pt-figs span b{color:var(--pt-ink);font-size:13.5px}
+
+/* 榜单 */
+.pt-rank{background:linear-gradient(160deg,#0d1b2a,#12324a 60%,#0c4642);color:#eafaf6}
+.pt-rank .pt-h2{color:#fff}
+.pt-rank .pt-section-head p{color:#a9c4cd}
+.pt-rank-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.pt-rank-list{display:flex;flex-direction:column;gap:10px}
+.pt-rank-item{
+  display:flex;align-items:center;gap:14px;padding:12px 16px;border-radius:12px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);
+  transition:.2s;
+}
+.pt-rank-item:hover{background:rgba(255,255,255,.12);transform:translateX(4px)}
+.pt-rank-no{
+  width:28px;height:28px;border-radius:8px;display:grid;place-items:center;flex:none;
+  font-size:13px;font-weight:900;background:rgba(255,255,255,.12);color:#c7f8ef;
+}
+.pt-rank-item:nth-child(1) .pt-rank-no{background:var(--pt-lime);color:#0d1b2a}
+.pt-rank-item:nth-child(2) .pt-rank-no{background:#8ef0dd;color:#0d1b2a}
+.pt-rank-item:nth-child(3) .pt-rank-no{background:#4ad4c2;color:#0d1b2a}
+.pt-rank-info{flex:1;min-width:0}
+.pt-rank-info h4{font-size:14px;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pt-rank-info small{font-size:12px;color:#9fbcc6}
+.pt-rank-val{font-size:13px;font-weight:800;color:var(--pt-lime);flex:none}
+
+/* 评价 */
+.pt-voices-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pt-voice{
+  background:#fff;border:1px solid var(--pt-line);border-radius:16px;padding:18px;
+  display:flex;flex-direction:column;gap:10px;transition:.2s;
+}
+.pt-voice:hover{box-shadow:var(--pt-shadow);transform:translateY(-3px)}
+.pt-voice p{font-size:13.5px;color:#3b4f61;margin:0;flex:1}
+.pt-voice-who{display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--pt-muted)}
+.pt-voice-who .pt-avatar{width:32px;height:32px;border-radius:50%;font-size:13px}
+.pt-stars{color:#f0a92b;font-size:12px;letter-spacing:1px}
+
+/* 动态 & FAQ */
+.pt-split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.pt-log{display:flex;flex-direction:column;gap:0;border-left:2px solid rgba(18,184,166,.3);margin-left:6px}
+.pt-log-item{padding:0 0 22px 22px;position:relative}
+.pt-log-item::before{
+  content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;
+  background:#fff;border:3px solid var(--pt-cyan);
+}
+.pt-log-item time{font-size:12px;font-weight:800;color:var(--pt-cyan-deep);letter-spacing:.03em}
+.pt-log-item h4{font-size:15px;margin:4px 0 4px}
+.pt-log-item p{font-size:13px;color:var(--pt-muted);margin:0}
+.pt-faq{border:1px solid var(--pt-line);border-radius:var(--pt-radius);background:#fff;overflow:hidden}
+.pt-faq details{border-bottom:1px solid var(--pt-line)}
+.pt-faq details:last-child{border-bottom:none}
+.pt-faq summary{
+  list-style:none;cursor:pointer;padding:16px 20px;font-size:14.5px;font-weight:700;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+.pt-faq summary::-webkit-details-marker{display:none}
+.pt-faq summary::after{
+  content:"+";font-size:20px;font-weight:400;color:var(--pt-cyan-deep);line-height:1;flex:none;
+  transition:transform .2s;
+}
+.pt-faq details[open] summary::after{transform:rotate(45deg)}
+.pt-faq details p{padding:0 20px 16px;font-size:13.5px;color:var(--pt-muted);margin:0}
+
+/* 合作伙伴 */
+.pt-partners{background:#fff;border-top:1px solid var(--pt-line);border-bottom:1px solid var(--pt-line)}
+.pt-partner-row{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.pt-partner{
+  border:1px dashed var(--pt-line);border-radius:12px;height:74px;
+  display:grid;place-items:center;font-size:13px;font-weight:800;color:#54697b;
+  letter-spacing:.02em;transition:.2s;background:#fbfdfd;
+}
+.pt-partner:hover{border-color:var(--pt-cyan);color:var(--pt-cyan-deep);background:rgba(18,184,166,.05)}
+
+/* 联系 */
+.pt-contact{background:linear-gradient(135deg,#0d1b2a,#134a4a);color:#e9fbf7;border-radius:26px;padding:44px clamp(24px,5vw,52px)}
+.pt-contact h2{color:#fff;font-size:clamp(23px,3vw,30px)}
+.pt-contact p{color:#a9c6c9;font-size:14.5px;max-width:620px}
+.pt-contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:34px;margin-top:26px}
+.pt-contact-actions{display:flex;flex-wrap:wrap;gap:12px}
+.pt-btn-lime{background:var(--pt-lime);color:#0d1b2a;box-shadow:0 12px 26px rgba(182,243,107,.2)}
+.pt-btn-lime:hover{transform:translateY(-2px)}
+.pt-btn-line{border:1px solid rgba(255,255,255,.3);color:#fff}
+.pt-btn-line:hover{background:rgba(255,255,255,.1)}
+.pt-contact-info{display:flex;flex-direction:column;gap:10px;font-size:13.5px;color:#bfd9dc}
+.pt-contact-info b{color:#fff;font-weight:700}
+
+/* 页脚 */
+.pt-footer{background:#0b1621;color:#93a9b5;padding:52px 0 26px;font-size:13.5px}
+.pt-footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px}
+.pt-footer .pt-logo{color:#fff;margin-bottom:12px}
+.pt-footer p{color:#7d93a0;font-size:13px}
+.pt-footer h4{color:#fff;font-size:14px;margin-bottom:12px;letter-spacing:.02em}
+.pt-footer li{margin-bottom:8px}
+.pt-footer li a:hover{color:#4ad4c2}
+.pt-footer-bottom{
+  margin-top:36px;padding-top:18px;border-top:1px solid rgba(255,255,255,.09);
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
+  font-size:12.5px;color:#77899a;
+}
+.pt-footer-bottom a:hover{color:#4ad4c2}
+
+/* 回到顶部 */
+.pt-top{
+  position:fixed;right:22px;bottom:22px;z-index:70;width:46px;height:46px;border-radius:14px;
+  background:var(--pt-ink);color:#fff;display:grid;place-items:center;
+  opacity:0;pointer-events:none;transform:translateY(12px);
+  transition:.28s;box-shadow:0 10px 24px rgba(13,27,42,.3);
+}
+.pt-top.is-show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.pt-top:hover{background:var(--pt-cyan-deep)}
+.pt-top svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+
+/* Toast & 弹窗 */
+.pt-toast{
+  position:fixed;left:50%;bottom:36px;transform:translate(-50%,20px);z-index:120;
+  background:#0d1b2a;color:#e8fffa;font-size:13.5px;font-weight:600;
+  padding:11px 22px;border-radius:12px;opacity:0;pointer-events:none;
+  transition:.28s;box-shadow:0 16px 36px rgba(0,0,0,.28);
+}
+.pt-toast.is-on{opacity:1;transform:translate(-50%,0)}
+.pt-modal{
+  position:fixed;inset:0;z-index:110;display:none;place-items:center;padding:20px;
+  background:rgba(9,20,32,.62);backdrop-filter:blur(4px);
+}
+.pt-modal.is-open{display:grid}
+.pt-modal-box{
+  background:#fff;border-radius:20px;width:min(480px,94vw);padding:26px;
+  box-shadow:0 30px 70px rgba(0,0,0,.35);animation:pt-pop .26s ease-out;
+}
+@keyframes pt-pop{from{transform:scale(.94);opacity:0}to{transform:scale(1);opacity:1}}
+.pt-modal-box h3{font-size:19px;margin-bottom:6px}
+.pt-modal-box p{font-size:13.5px;color:var(--pt-muted)}
+.pt-modal-field{
+  width:100%;border:1px solid var(--pt-line);border-radius:10px;padding:11px 13px;
+  font-size:14px;font-family:inherit;margin-top:6px;outline:none;transition:.18s;
+}
+.pt-modal-field:focus{border-color:var(--pt-cyan);box-shadow:0 0 0 4px rgba(18,184,166,.14)}
+.pt-modal-row{display:flex;gap:10px;justify-content:flex-end;margin-top:20px}
+.pt-modal-row .pt-btn{padding:10px 20px;font-size:13.5px}
+
+/* 响应式 */
+@media (max-width:1020px){
+  .pt-hero-grid{grid-template-columns:1fr;gap:34px}
+  .pt-focus-grid{grid-template-columns:1fr}
+  .pt-grid-3{grid-template-columns:repeat(2,1fr)}
+  .pt-grid-4{grid-template-columns:repeat(2,1fr)}
+  .pt-special-grid{grid-template-columns:repeat(2,1fr)}
+  .pt-creator-grid{grid-template-columns:repeat(2,1fr)}
+  .pt-voices-grid{grid-template-columns:repeat(2,1fr)}
+  .pt-about-grid,.pt-split,.pt-rank-grid,.pt-contact-grid{grid-template-columns:1fr}
+  .pt-partner-row{grid-template-columns:repeat(3,1fr)}
+  .pt-footer-grid{grid-template-columns:1fr 1fr}
+  .pt-search-tip{right:4vw}
+}
+@media (max-width:820px){
+  html{scroll-padding-top:124px}
+  .pt-nav{display:none}
+  .pt-search{display:none}
+  .pt-burger{display:block}
+  .pt-header-inner{height:62px}
+  .pt-notice-inner{height:34px}
+  .pt-hero{padding:38px 0 34px}
+  .pt-section{padding:48px 0}
+}
+@media (max-width:640px){
+  .pt-grid-3,.pt-grid-4,.pt-special-grid,.pt-creator-grid,.pt-voices-grid{grid-template-columns:1fr}
+  .pt-stats{grid-template-columns:1fr 1fr}
+  .pt-mini{grid-template-columns:112px 1fr}
+  .pt-partner-row{grid-template-columns:repeat(2,1fr)}
+  .pt-footer-grid{grid-template-columns:1fr}
+  .pt-notice-list{animation-duration:26s}
+  .pt-hero-chip{right:6px;top:12px;padding:8px 12px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="pt-sticky">
+  <div class="pt-notice">
+    <div class="pt-wrap pt-notice-inner">
+      <span class="pt-notice-badge">官方发布</span>
+      <div class="pt-notice-track">
+        <ul class="pt-notice-list" id="ptNoticeList">
+          <li><b>11-19</b> 「传送门下载」冬季专题《跨越边界》正式上线，收录 12 支原创纪录短片</li>
+          <li><b>11-16</b> 创作挑战赛第二季开放报名，上传你的传送门主题作品赢取年度曝光位</li>
+          <li><b>11-12</b> 下载与安装场景系列教程更新至第 9 集，新增多设备协同演示</li>
+          <li><b>11-19</b> 「传送门下载」冬季专题《跨越边界》正式上线，收录 12 支原创纪录短片</li>
+          <li><b>11-16</b> 创作挑战赛第二季开放报名，上传你的传送门主题作品赢取年度曝光位</li>
+          <li><b>11-12</b> 下载与安装场景系列教程更新至第 9 集，新增多设备协同演示</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <header class="pt-header">
+    <div class="pt-wrap pt-header-inner">
+      <a class="pt-logo" href="#ptTop" aria-label="传送门下载官方品牌站首页">
+        <span class="pt-logo-mark">P</span>
+        <span>传送门下载</span>
+      </a>
+      <nav class="pt-nav" aria-label="主导航">
+        <a href="#ptFocus">焦点内容</a>
+        <a href="#ptStream">视频流</a>
+        <a href="#ptTopic">专题企划</a>
+        <a href="#ptCreator">创作者</a>
+        <a href="#ptRank">榜单</a>
+        <a href="#ptNews">企业动态</a>
+        <a href="#ptContact">联系</a>
+      </nav>
+      <form class="pt-search" id="ptSearchForm" role="search" onsubmit="return false;">
+        <input id="ptSearchInput" type="search" placeholder="搜索下载教程 / 场景 / 作者" aria-label="站内搜索">
+        <button type="button" id="ptSearchBtn">搜索</button>
+      </form>
+      <button class="pt-burger" id="ptBurger" aria-label="展开导航菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="pt-mobile-nav" id="ptMobileNav">
+      <a href="#ptFocus">焦点内容</a>
+      <a href="#ptStream">视频流</a>
+      <a href="#ptTopic">专题企划</a>
+      <a href="#ptCreator">创作者</a>
+      <a href="#ptRank">榜单</a>
+      <a href="#ptNews">企业动态</a>
+      <a href="#ptContact">联系</a>
+    </div>
+  </header>
+</div>
+<div class="pt-search-tip" id="ptSearchTip" role="status"></div>
+
+<main id="ptTop">
+
+  <!-- 首屏 -->
+  <section class="pt-hero">
+    <div class="pt-wrap pt-hero-grid">
+      <div>
+        <span class="pt-kicker"><i></i>传送门下载 · 官方网站</span>
+        <h1 class="pt-h1">传送门下载<em>官方品牌站</em></h1>
+        <p class="pt-hero-sub">让每一次获取，都成为通往新场景的入口。</p>
+        <p class="pt-hero-desc">作为深耕「传送门下载」领域的品牌方，我们以原创视频与专业教程为核心，搭建从下载、安装、配置到高效使用的完整内容生态。这里有企业级的品质标准，也有持续活跃的创作者社区：每一次官方发布，都为用户提供值得信赖的参考；每一支精品内容，都在回应真实的使用场景。</p>
+        <div class="pt-hero-actions">
+          <a class="pt-btn pt-btn-main" href="#ptFocus">进入焦点内容
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="pt-btn pt-btn-ghost" href="#ptCreator">认识创作者</a>
+          <button class="pt-btn pt-btn-ghost" id="ptShareTop" type="button">分享官网</button>
+        </div>
+        <div class="pt-stats">
+          <div class="pt-stat"><b data-pt-count="1280000">0</b><small>优质内容累计触达</small></div>
+          <div class="pt-stat"><b data-pt-count="326">0</b><small>入驻创作者</small></div>
+          <div class="pt-stat"><b data-pt-count="96">0<span>%</span></b><small>用户满意度口碑</small></div>
+        </div>
+      </div>
+      <div class="pt-hero-visual">
+        <div class="pt-hero-frame">
+          <svg viewBox="0 0 800 450" role="img" aria-label="传送门下载品牌主视觉：蓝色光门与数据流构成的开屏画面">
+            <defs>
+              <linearGradient id="ptHeroBg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#0d1b2a"/><stop offset="0.55" stop-color="#123a4d"/><stop offset="1" stop-color="#0a6b62"/>
+              </linearGradient>
+              <linearGradient id="ptHeroDoor" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#7ff2dd"/><stop offset="1" stop-color="#12b8a6"/>
+              </linearGradient>
+              <radialGradient id="ptHeroGlow" cx="0.5" cy="0.5" r="0.5">
+                <stop offset="0" stop-color="#b6f36b" stop-opacity="0.85"/><stop offset="1" stop-color="#b6f36b" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="800" height="450" fill="url(#ptHeroBg)"/>
+            <g opacity="0.32" stroke="#4ad4c2" stroke-width="1">
+              <path d="M0 330h800M0 380h800M0 280h800"/>
+              <path d="M120 450L260 0M300 450L400 0M520 450L560 0M680 450L680 0"/>
+            </g>
+            <circle cx="400" cy="210" r="150" fill="url(#ptHeroGlow)" opacity="0.45"/>
+            <path d="M330 300c0-52 32-78 70-78s70 26 70 78v40h-26v-40c0-29-18-52-44-52s-44 23-44 52v40h-26z" fill="url(#ptHeroDoor)" opacity="0.95"/>
+            <circle cx="400" cy="196" r="16" fill="#0d1b2a"/>
+            <rect x="386" y="206" width="28" height="34" rx="8" fill="#0d1b2a" opacity="0.55"/>
+            <g fill="#b6f36b">
+              <circle cx="238" cy="132" r="5"/><circle cx="562" cy="118" r="4"/>
+              <circle cx="196" cy="262" r="3.5"/><circle cx="604" cy="256" r="5"/>
+              <circle cx="300" cy="92" r="3"/><circle cx="508" cy="88" r="3"/>
+            </g>
+            <g stroke="#7ff2dd" stroke-width="1.6" opacity="0.6" fill="none">
+              <path d="M238 132L330 180M562 118L470 176M196 262L330 236M604 256L470 240"/>
+            </g>
+            <rect x="60" y="366" width="180" height="8" rx="4" fill="#ffffff" opacity="0.16"/>
+            <rect x="60" y="386" width="96" height="8" rx="4" fill="#ffffff" opacity="0.1"/>
+          </svg>
+          <div class="pt-hero-play"><i></i></div>
+          <span class="pt-hero-tag">品牌形象片 · 高清画质</span>
+        </div>
+        <div class="pt-hero-chip">本月新增 <span>48</span> 支原创</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 深度解析 -->
+  <section class="pt-section pt-about" id="ptAbout">
+    <div class="pt-wrap">
+      <div class="pt-section-head">
+        <span class="pt-eyebrow">品牌深度解析</span>
+        <h2 class="pt-h2">传送门下载，不只是一个<span class="pt-mark">入口</span></h2>
+        <p>我们如何理解“传送门下载”这个词，以及它背后持续生长的内容世界。</p>
+      </div>
+      <div class="pt-about-grid">
+        <article>
+          <h3>一、从“下载”到“抵达”的语义迁移</h3>
+          <p>在早期互联网语境里，“下载”是一个技术动作：把远端的文件搬运到本地。而当我们把“传送门”这三个字放在它前面，动作就拥有了方向感与叙事性——它不再只是文件的位移，而是一次有目的的抵达。传送门下载所描述的，是用户从公开、可信的渠道获取工具与内容，并在一套清晰的方法论中完成安装、配置、使用与进阶的完整旅程。作为品牌方，我们把这套旅程拍成视频，写成教程，做成可以被反复回看的精品内容，让每一次操作都有据可依。</p>
+          <h3>二、内容生态的三层结构</h3>
+          <p>我们把传送门下载的内容生态分为三层。最底层是“基础规范”，回答来源是否可靠、版本是否匹配、校验是否完整；中间层是“场景教程”，覆盖办公、学习、创作、多设备协同等真实需求；最上层是“创作者表达”，由入驻作者用个人视角讲述他们与工具相处的日常。三层结构并不割裂：一支关于桌面整理的短视频，可能同时承载版本说明、操作演示与生活态度。我们坚持原创与正版，坚持在页面上标注清晰的信息来源，也坚持让专业内容保持可读性，这是企业级内容平台应有的分寸。</p>
+          <h3>三、我们为什么强调“官方”二字</h3>
+          <p>工具类内容最容易出现的困扰，是版本混乱与来源模糊。传送门下载官方网站因此建立了固定的编辑流程：每支教程发布前经过两轮技术校验，每份版本说明保留更新记录，每条外部引用都标注出处与日期。我们相信，用户首选一个平台，往往不是因为它的内容最多，而是因为它最值得信赖。这种信赖需要长期、稳定、可查证的持续运营来积累，也正是我们做企业动态与更新日志的意义。</p>
+          <h3>四、社区是内容的第二次生命</h3>
+          <p>在传送门下载的社区里，视频不是终点。用户会在评论区补充自己的设备型号与系统版本，会指出教程里的细节可以更精确，也会上传自己改造后的工作流。这些反馈会被编辑团队整理成选题，再回流到下一支内容中。我们把这称为“内容生态的循环”：创作者提供方法与视角，社区提供真实场景与修正，品牌提供标准与工具。持续运营的价值，正在于让这个循环不停转。</p>
+          <h3>五、面向未来的内容路线</h3>
+          <p>接下来的一年，传送门下载会把重心放在三件事上：更清晰的分场景导航，让用户三步之内找到所需；更完整的创作者成长路径，从投稿指南、剪辑思路到年度曝光；更开放的合作方式，与相关行业伙伴共同推出联合内容。我们仍将保持克制——不做标题党，不用夸张承诺，不制造焦虑。品质与口碑，是我们愿意慢慢积累的东西。</p>
+        </article>
+        <article>
+          <h3>六、内容生产的六个质量关卡</h3>
+          <p>一支传送门下载的教程从选题到上线，需要经过六道关卡。第一关是需求校验，编辑会从站内搜索词、评论区高频提问与社区投票中筛出真实需求；第二关是脚本拆解，把复杂流程切成可复现的步骤；第三关是实操录制，在至少两种设备环境下完成；第四关是版本复核，由技术顾问确认说明与当前版本一致；第五关是信息标注，补齐来源、时间与适用条件；第六关是发布后的持续追踪，收集用户反馈并在必要时更新。关卡并不追求繁琐，而是让“专业”成为可见的流程。</p>
+          <h3>七、创作者在这里能得到什么</h3>
+          <p>我们为创作者提供的不只是展示位。入驻后，作者可以得到选题建议、拍摄与剪辑的技术支持、内容合规指导，以及基于真实数据的复盘报告。年度计划中，我们设置了创作挑战、主题征集与作品投票，让新作者也有机会进入首页推荐。我们希望创作者把传送门下载当作一个可以长期经营的阵地，而不是一次性上传的通道。多元与包容，体现在我们并不要求所有人都用同一种表达方式：有人擅长冷静讲解，有人擅长生活化演绎，有人只做三分钟的极简演示，这些都值得被看见。</p>
+          <h3>八、用户在这里能得到什么</h3>
+          <p>对用户而言，传送门下载提供三件确定的东西：能查证的信息、能复现的步骤、能交流的社区。我们不假设用户是专家，也不把用户当作流量。每篇内容都尽量回答“为什么这样做”和“什么情况下不适用”，每支视频都标注时长与关键节点，让用户可以按需跳转。收藏、点赞、评论和分享功能的设计，也都围绕“下次还能找得到”这个朴素目标展开。</p>
+          <h3>九、关于合作与责任</h3>
+          <p>传送门下载与多家内容平台、工具服务方、教育机构保持内容合作，共同推出联合专题与公开课。我们坚持合作内容的独立标注，明确区分官方制作与合作伙伴提供的内容。作为一个持续运营的内容品牌，社会责任不是口号：我们会在内容中提醒用户注意信息安全与隐私保护，也会在涉及第三方资源时强调合规使用。这些细节可能不会带来即时的流量，但它们构成了品牌真正的底座。</p>
+          <h3>十、写给第一次来的你</h3>
+          <p>如果你是第一次来到传送门下载官方网站，建议从焦点内容开始，看一支完整的基础教程；然后进入视频流，按标签筛选你关心的场景；如果你愿意，欢迎在创作者页面关注几位风格合适的作者，或者在投稿入口留下你的作品。我们相信，好的内容平台不需要喧哗，它只需要在你需要的时候，恰好在那里，并且足够可靠。</p>
+          <div class="pt-pillbox">
+            <span class="pt-pill">官方网站</span>
+            <span class="pt-pill">原创正版</span>
+            <span class="pt-pill">高清画质</span>
+            <span class="pt-pill">内容生态</span>
+            <span class="pt-pill">持续运营</span>
+            <span class="pt-pill">值得信赖</span>
+            <span class="pt-pill">匠心制作</span>
+            <span class="pt-pill">用户至上</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section class="pt-section" id="ptFocus">
+    <div class="pt-wrap">
+      <div class="pt-section-head">
+        <span class="pt-eyebrow">焦点内容</span>
+        <h2 class="pt-h2">本周值得完整看完的<span class="pt-mark">五支片子</span></h2>
+        <p>由编辑团队与技术顾问共同把关，覆盖从入门到进阶的传送门下载关键场景。</p>
+      </div>
+      <div class="pt-focus-grid">
+        <div class="pt-card pt-focus-main">
+          <div class="pt-cover">
+            <span class="pt-cover-label">焦点 · 24:18</span>
+            <svg viewBox="0 0 800 450" role="img" aria-label="传送门下载完整流程演示视频封面：一只手引导光门开始运转">
+              <defs>
+                <linearGradient id="ptF1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#0a5b57"/><stop offset="1" stop-color="#12b8a6"/>
+                </linearGradient>
+              </defs>
+              <rect width="800" height="450" fill="url(#ptF1)"/>
+              <circle cx="620" cy="120" r="150" fill="#b6f36b" opacity="0.16"/>
+              <g opacity="0.9">
+                <rect x="150" y="120" width="240" height="210" rx="18" fill="#0d1b2a" opacity="0.55"/>
+                <rect x="170" y="142" width="130" height="10" rx="5" fill="#7ff2dd"/>
+                <rect x="170" y="164" width="196" height="8" rx="4" fill="#7ff2dd" opacity="0.5"/>
+                <rect x="170" y="182" width="164" height="8" rx="4" fill="#7ff2dd" opacity="0.35"/>
+                <rect x="170" y="220" width="200" height="60" rx="10" fill="#12b8a6" opacity="0.45"/>
+                <rect x="170" y="296" width="90" height="12" rx="6" fill="#b6f36b"/>
+              </g>
+              <g transform="translate(470 150)" opacity="0.92">
+                <rect width="190" height="230" rx="16" fill="#0d1b2a"/>
+                <path d="M60 100h70l-22-24M70 100v90h70" stroke="#4ad4c2" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="140" cy="190" r="10" fill="#b6f36b"/>
+              </g>
+              <path d="M390 225h60" stroke="#eafffb" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+              <path d="M438 213l14 12-14 12" stroke="#eafffb" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+            </svg>
+            <div class="pt-cover-tri"></div>
+          </div>
+          <div class="pt-card-body">
+            <div class="pt-tags"><span class="pt-tag">入门指南</span><span class="pt-tag">官方制作</span></div>
+            <h3 class="pt-card-title">从来源校验到首次启动：传送门下载完整流程一次讲透</h3>
+            <p class="pt-card-desc">完整拆解传送门下载的全流程——如何判断来源是否可靠、如何核对版本与校验信息、安装时常见的权限提示如何理解、首次启动后建议完成的四项基础设置。片中提供两种设备环境的对照演示，并给出一份可直接保存的检查清单。</p>
+            <div class="pt-card-meta">
+              <span class="pt-mini-avatarset">官</span>
+              <span>编辑团队 · 官方出品</span>
+              <span>·</span><span>2 小时前</span>
+            </div>
+            <div class="pt-actions">
+              <button class="pt-act" data-pt-like type="button" aria-pressed="false">
+                <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6C19 15.6 12 20 12 20z"/></svg>
+                <span data-pt-like-count>2841</span>
+              </button>
+              <button class="pt-act" data-pt-save type="button" aria-pressed="false">
+                <svg viewBox="0 0 24 24"><path d="M6 4h12v17l-6-4-6 4z"/></svg>收藏
+              </button>
+              <button class="pt-act" data-pt-comment type="button">
+                <svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>评论
+              </button>
+              <button class="pt-act" data-pt-copy type="button">
+                <svg viewBox="0 0 24 24"><path d="M9 9h11v11H9z"/><path d="M4 15V4h11"/></svg>复制链接
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="pt-focus-side">
+          <article class="pt-mini">
+            <div class="pt-cover">
+              <svg viewBox="0 0 320 180" role="img" aria-label="多设备协同配置演示视频封面：电脑与平板之间的数据传输">
+                <rect width="320" height="180" fill="#123a4d"/>
+                <rect x="26" y="34" width="120" height="86" rx="8" fill="#0d1b2a"/>
+                <rect x="38" y="46" width="72" height="7" rx="3.5" fill="#4ad4c2"/>
+                <rect x="38" y="60" width="96" height="6" rx="3" fill="#4ad4c2" opacity="0.5"/>
+                <rect x="176" y="52" width="70" height="106" rx="10" fill="#0d1b2a"/>
+                <rect x="186" y="66" width="50" height="6" rx="3" fill="#b6f36b"/>
+                <path d="M146 96h26" stroke="#b6f36b" stroke-width="3" stroke-linecap="round"/>
+                <path d="M165 89l7 7-7 7" stroke="#b6f36b" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="26" y="136" width="120" height="8" rx="4" fill="#ffffff" opacity="0.14"/>
+              </svg>
+              <div class="pt-cover-tri"></div>
+            </div>
+            <div class="pt-mini-body">
+              <h4>多设备协同：让下载结果在三台设备间保持一致</h4>
+              <small>技术顾问 · 时长 12:40</small>
+            </div>
+          </article>
+          <article class="pt-mini">
+            <div class="pt-cover">
+              <svg viewBox="0 0 320 180" role="img" aria-label="版本对照实测视频封面：两个版本卡片并排比较">
+                <rect width="320" height="180" fill="#0f5b57"/>
+                <rect x="24" y="34" width="118" height="112" rx="10" fill="#0d1b2a" opacity="0.7"/>
+                <rect x="178" y="34" width="118" height="112" rx="10" fill="#0d1b2a" opacity="0.7"/>
+                <rect x="40" y="52" width="60" height="8" rx="4" fill="#7ff2dd"/>
+                <rect x="194" y="52" width="60" height="8" rx="4" fill="#b6f36b"/>
+                <rect x="40" y="72" width="86" height="6" rx="3" fill="#7ff2dd" opacity="0.45"/>
+                <rect x="194" y="72" width="70" height="6" rx="3" fill="#b6f36b" opacity="0.45"/>
+                <circle cx="160" cy="90" r="15" fill="#f4f7f8"/>
+                <path d="M154 90h12M160 84v12" stroke="#0d1b2a" stroke-width="2.4" stroke-linecap="round"/>
+              </svg>
+              <div class="pt-cover-tri"></div>
+            </div>
+            <div class="pt-mini-body">
+              <h4>两个版本怎么选？深度测评与适用场景对照</h4>
+              <small>测评组 · 时长 18:05</small>
+            </div>
+          </article>
+          <article class="pt-mini">
+            <div class="pt-cover">
+              <svg viewBox="0 0 320 180" role="img" aria-label="创作者访谈视频封面：两位创作者对坐交谈">
+                <rect width="320" height="180" fill="#1b2f45"/>
+                <circle cx="96" cy="76" r="24" fill="#12b8a6"/>
+                <path d="M64 138c0-20 14-32 32-32s32 12 32 32z" fill="#12b8a6" opacity="0.75"/>
+                <circle cx="226" cy="76" r="24" fill="#b6f36b"/>
+                <path d="M194 138c0-20 14-32 32-32s32 12 32 32z" fill="#b6f36b" opacity="0.6"/>
+                <rect x="120" y="148" width="80" height="6" rx="3" fill="#ffffff" opacity="0.2"/>
+                <path d="M126 40h68" stroke="#ffffff" stroke-width="2" opacity="0.2"/>
+              </svg>
+              <div class="pt-cover-tri"></div>
+            </div>
+            <div class="pt-mini-body">
+              <h4>访谈：把工具讲清楚，是这一代创作者的基本功</h4>
+              <small>内容组 · 时长 09:32</small>
+            </div>
+          </article>
+          <article class="pt-mini">
+            <div class="pt-cover">
+              <svg viewBox="0 0 320 180" role="img" aria-label="常见误操作排查视频封面：警示图标与操作步骤">
+                <rect width="320" height="180" fill="#0d1b2a"/>
+                <path d="M160 40l52 90H108z" fill="#f0a92b" opacity="0.9"/>
+                <path d="M160 70v26" stroke="#0d1b2a" stroke-width="7" stroke-linecap="round"/>
+                <circle cx="160" cy="112" r="5" fill="#0d1b2a"/>
+                <rect x="30" y="146" width="120" height="7" rx="3.5" fill="#4ad4c2" opacity="0.5"/>
+                <rect x="172" y="146" width="120" height="7" rx="3.5" fill="#4ad4c2" opacity="0.3"/>
+              </svg>
+              <div class="pt-cover-tri"></div>
+            </div>
+            <div class="pt-mini-body">
+              <h4>七个常见误操作排查清单，附逐条修正演示</h4>
+              <small>支持组 · 时长 15:21</small>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 视频流 -->
+  <section class="pt-section pt-stream" id="ptStream">
+    <div class="pt-wrap">
+      <div class="pt-section-head">
+        <span class="pt-eyebrow">热门视频流</span>
+        <h2 class="pt-h2">按场景筛选你的<span class="pt-mark">传送门下载</span>内容</h2>
+        <p>六大标签覆盖办公、创作、学习、安全、多设备与进阶玩法，点击标签即可筛选当前视频流。</p>
+      </div>
+      <div class="pt-filter" id="ptFilter" role="tablist" aria-label="视频内容标签筛选">
+        <button class="pt-chip is-active" data-pt-filter="all" type="button" role="tab" aria-selected="true">全部</button>
+        <button class="pt-chip" data-pt-filter="guide" type="button" role="tab" aria-selected="false">入门教程</button>
+        <button class="pt-chip" data-pt-filter="work" type="button" role="tab" aria-selected="false">高效办公</button>
+        <button class="pt-chip" data-pt-filter="create" type="button" role="tab" aria-selected="false">创作场景</button>
+        <button class="pt-chip" data-pt-filter="safe" type="button" role="tab" aria-selected="false">安全合规</button>
+        <button class="pt-chip" data-pt-filter="device" type="button" role="tab" aria-selected="false">多设备</button>
+      </div>
+      <div class="pt-grid-3" id="ptVideoGrid">
+        <article class="pt-card" data-pt-cat="guide">
+          <div class="pt-cover">
+            <span class="pt-cover-label">06:12</span>
+            <svg viewBox="0 0 640 360" role="img" aria-label="新手第一课视频封面：从零开始的步骤清单界面">
+              <rect width="640" height="360" fill="#0a8d80"/>
+              <rect x="60" y="54" width="520" height="252" rx="16" fill="#083f45" opacity="0.85"/>
+              <rect x="88" y="82" width="180" height="12" rx="6" fill="#b6f36b"/>
+              <g fill="#7ff2dd" opacity="0.7">
+                <rect x="88" y="120" width="360" height="9" rx="4.5"/>
+                <rect x="88" y="146" width="300" height="9" rx="4.5"/>
+                <rect x="88" y="172" width="400" height="9" rx="4.5"/>
+                <rect x="88" y="198" width="250" height="9" rx="4.5"/>
+              </g>
+              <circle cx="470" cy="236" r="38" fill="#b6f36b"/>
+              <path d="M454 236l12 12 22-24" stroke="#083f45" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="pt-cover-tri"></div>
+          </div>
+          <div class="pt-card-body">
+            <div class="pt-tags"><span class="pt-tag">入门教程</span></div>
+            <h3 class="pt-card-title">新手第一课：十分钟建立你的下载检查习惯</h3>
+            <p class="pt-card-desc">把来源、版本、校验三件事变成肌肉记忆，减少九成以上的踩坑。</p>
+            <div class="pt-card-meta"><span class="pt-mini-avatarset">教</span><span>教学组</span><span>·</span><span>1.8 万次浏览</span></div>
+            <div class="pt-actions">
+              <button class="pt-act" data-pt-like type="button"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6C19 15.6 12 20 12 20z"/></svg><span data-pt-like-count>1204</span></button>
+              <button class="pt-act" data-pt-save type="button"><svg viewBox="0 0 24 24"><path d="M6 4h12v17l-6-4-6 4z"/></svg>收藏</button>
+              <button class="pt-act" data-pt-comment type="button"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="pt-card" data-pt-cat="work">
+          <div class="pt-cover">
+            <span class="pt-cover-label">11:47</span>
+            <svg viewBox="0 0 640 360" role="img" aria-label="高效办公场景视频封面：桌面工作台与待办清单">
+              <rect width="640" height="360" fill="#1b2f45"/>
+              <rect x="48" y="230" width="544" height="14" rx="7" fill="#0d1b2a"/>
+              <rect x="120" y="76" width="180" height="140" rx="10" fill="#12b8a6"/>
+              <rect x="322" y="96" width="200" height="10" rx="5" fill="#ffffff" opacity="0.65"/>
+              <rect x="322" y="122" width="150" height="10" rx="5" fill="#ffffff" opacity="0.4"/>
+              <rect x="322" y="150" width="176" height="10" rx="5" fill="#b6f36b" opacity="0.85"/>
+              <rect x="322" y="178" width="120" height="10" rx="5" fill="#ffffff" opacity="0.3"/>
+              <circle cx="510" cy="238" r="22" fill="#f0a92b"/>
+            </svg>
+            <div class="pt-cover-tri"></div>
+          </div>
+          <div class="pt-card-body">
+            <div class="pt-tags"><span class="pt-tag">高效办公</span></div>
+            <h3 class="pt-card-title">把重复操作交给流程：一套可复用的办公配置</h3>
+            <p class="pt-card-desc">从命名规则到目录结构，演示一次配置、长期受益的整理思路。</p>
+            <div class="pt-card-meta"><span class="pt-mini-avatarset">效</span><span>效率实验室</span><span>·</span><span>1.2 万次浏览</span></div>
+            <div class="pt-actions">
+              <button class="pt-act" data-pt-like type="button"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6C19 15.6 12 20 12 20z"/></svg><span data-pt-like-count>986</span></button>
+              <button class="pt-act" data-pt-save type="button"><svg viewBox="0 0 24 24"><path d="M6 4h12v17l-6-4-6 4z"/></svg>收藏</button>
+              <button class="pt-act" data-pt-comment type="button"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="pt-card" data-pt-cat="create">
+          <div class="pt-cover">
+            <span class="pt-cover-label">14:03</span>
+            <svg viewBox="0 0 640 360" role="img" aria-label="创作场景视频封面：剪辑时间线与素材箱">
+              <rect width="640" height="360" fill="#2a1f3d"/>
+              <rect x="48" y="60" width="330" height="180" rx="12" fill="#0d1b2a"/>
+              <rect x="72" y="86" width="120" height="70" rx="8" fill="#8b6cf0"/>
+              <rect x="206" y="86" width="148" height="70" rx="8" fill="#4ad4c2"/>
+              <g fill="#ffffff" opacity="0.35">
+                <rect x="72" y="176" width="282" height="8" rx="4"/>
+                <rect x="72" y="196" width="200" height="8" rx="4"/>
+                <rect x="72" y="216" width="240" height="8" rx="4"/>
+              </g>
+              <rect x="402" y="60" width="190" height="112" rx="12" fill="#0d1b2a"/>
+              <rect x="418" y="78" width="158" height="8" rx="4" fill="#b6f36b" opacity="0.8"/>
+              <rect x="418" y="98" width="120" height="8" rx="4" fill="#ffffff" opacity="0.35"/>
+              <rect x="402" y="188" width="190" height="52" rx="12" fill="#0d1b2a"/>
+              <rect x="418" y="206" width="70" height="8" rx="4" fill="#4ad4c2"/>
+            </svg>
+            <div class="pt-cover-tri"></div>
+          </div>
+          <div class="pt-card-body">
+            <div class="pt-tags"><span class="pt-tag">创作场景</span></div>
+            <h3 class="pt-card-title">素材下载之后：一支短片从整理到成片的四步</h3>
+            <p class="pt-card-desc">演示素材归档、命名、粗剪与输出，顺带讲讲版权标注的必要性。</p>
+            <div class="pt-card-meta"><span class="pt-mini-avatarset">影</span><span>影像手记</span><span>·</span><span>9340 次浏览</span></div>
+            <div class="pt-actions">
+              <button class="pt-act" data-pt-like type="button"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6C19 15.6 12 20 12 20z"/></svg><span data-pt-like-count>813</span></button>
+              <button class="pt-act" data-pt-save type="button"><svg viewBox="0 0 24 24"><path d="M6 4h12v17l-6-4-6 4z"/></svg>收藏</button>
+              <button class="pt-act" data-pt-comment type="button"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="pt-card" data-pt-cat="safe">
+          <div class="pt-cover">
+            <span class="pt-cover-label">08:26</span>
+            <svg viewBox="0 0 640 360" role="img" aria-label="安全合规视频封面：盾牌与校验标记">
+              <rect width="640" height="360" fill="#0d1b2a"/>
+              <path d="M320 64l96 34v86c0 56-40 94-96 112-56-18-96-56-96-112v-86z" fill="#12b8a6" opacity="0.9"/>
+              <path d="M282 178l26 26 54-58" stroke="#0d1b2a" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="60" y="290" width="160" height="8" rx="4" fill="#4ad4c2" opacity="0.5"/>
+              <rect x="420" y="290" width="160" height="8" rx="4" fill="#4ad4c2" opacity="0.3"/>
+            </svg>
+            <div class="pt-cover-tri"></div>
+          </div>
+          <div class="pt-card-body">
+            <div class="pt-tags"><span class="pt-tag">安全合规</span></div>
+            <h3 class="pt-card-title">校验与隐私：辨别来源可靠性的三个可操作动作</h3>
+            <p class="pt-card-desc">不靠直觉靠方法，三个动作帮你在获取前完成基础判断。</p>
+            <div class="pt-card-meta"><span class="pt-mini-avatarset">安</span><span>安全观察</span><span>·</span><span>2.1 万次浏览</span></div>
+            <div class="pt-actions">
+              <button class="pt-act" data-pt-like type="button"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6C19 15.6 12 20 12 20z"/></svg><span data-pt-like-count>1567</span></button>
+              <button class="pt-act" data-pt-save type="button"><svg viewBox="0 0 24 24"><path d="M6 4h12v17l-6-4-6 4z"/></svg>收藏</button>
+              <button class="pt-act" data-pt-comment type="button"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="pt-card" data-pt-cat="device">
+          <div class="pt-cover">
+            <span class="pt-cover-label">10:19</span>
+            <svg viewBox="0 0 640 360" role="img" aria-label="多设备同步视频封面：三块屏幕之间的数据连线">
+              <rect width="640" height="360" fill="#0f3448"/>
+              <rect x="52" y="86" width="180" height="118" rx="10" fill="#0d1b2a"/>
+              <rect x="76" y="110" width="90" height="9" rx="4.5" fill="#4ad4c2"/>
+              <rect x="76" y="132" width="130" height="7" rx="3.5" fill="#4ad4c2" opacity="0.45"/>
+              <rect x="266" y="106" width="110" height="176" rx="14" fill="#0d1b2a"/>
+              <rect x="284" y="126" width="74" height="8" rx="4" fill="#b6f36b"/>
+              <rect x="406" y="128" width="180" height="118" rx="8" fill="#0d1b2a"/>
+              <rect x="428" y="152" width="110" height="9" rx="4.5" fill="#7ff2dd"/>
+              <path d="M232 150h34M376 160h30" stroke="#b6f36b" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <div class="pt-cover-tri"></div>
+          </div>
+          <div class="pt-card-body">
+            <div class="pt-tags"><span class="pt-tag">多设备</span></div>
+            <h3 class="pt-card-title">三端一致：电脑、平板与手机的配置同步方案</h3>
+            <p class="pt-card-desc">演示账号联动、参数迁移与冲突处理，让体验保持一致。</p>
+            <div class="pt-card-meta"><span class="pt-mini-avatarset">多</span><span>设备派</span><span>·</span><span>7650 次浏览</span></div>
+            <div class="pt-actions">
+              <button class="pt-act" data-pt-like type="button"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6C19 15.6 12 20 12 20z"/></svg><span data-pt-like-count>642</span></button>
+              <button class="pt-act" data-pt-save type="button"><svg viewBox="0 0 24 24"><path d="M6 4h12v17l-6-4-6 4z"/></svg>收藏</button>
+              <button class="pt-act" data-pt-comment type="button"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="pt-card" data-pt-cat="guide">
+          <div class="pt-cover">
+            <span class="pt-cover-label">07:44</span>
+            <svg viewBox="0 0 640 360" role="img" aria-label="版本说明阅读指南封面：文档与目录结构插画">
+              <rect width="640" height="360" fill="#133f3a"/>
+              <rect x="150" y="56" width="220" height="250" rx="12" fill="#f4f7f8"/>
+              <rect x="176" y="84" width="120" height="12" rx="6" fill="#0a8d80"/>
+              <g fill="#0d1b2a" opacity="0.28">
+                <rect x="176" y="116" width="168" height="8" rx="4"/>
+                <rect x="176" y="138" width="140" height="8" rx="4"/>
+                <rect x="176" y="160" width="160" height="8" rx="4"/>
+                <rect x="176" y="182" width="110" height="8" rx="4"/>
+                <rect x="176" y="204" width="150" height="8" rx="4"/>
+              </g>
+              <rect x="396" y="92" width="96" height="96" rx="14" fill="#b6f36b"/>
+              <path d="M424 140h40M444 120v40" stroke="#083f45" stroke-width="8" stroke-linecap="round"/>
+            </svg>
+            <div class="pt-cover-tri"></div>
+          </div>
+          <div class="pt-card-body">
+            <div class="pt-tags"><span class="pt-tag">入门教程</span></div>
+            <h3 class="pt-card-title">读懂版本说明：更新时间、适用范围与变更条目</h3>
+            <p class="pt-card-desc">教你快速定位关键信息，不再被冗长的说明文字劝退。</p>
+            <div class="pt-card-meta"><span class="pt-mini-avatarset">说</span><span>说明组</span><span>·</span><span>5890 次浏览</span></div>
+            <div class="pt-actions">
+              <button class="pt-act" data-pt-like type="button"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6C19 15.6 12 20 12 20z"/></svg><span data-pt-like-count>478</span></button>
+              <button class="pt-act" data-pt-save type="button"><svg viewBox="0 0 24 24"><path d="M6 4h12v17l-6-4-6 4z"/></svg>收藏</button>
+              <button class="pt-act" data-pt-comment type="button"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="pt-card" data-pt-cat="work">
+          <div class="pt-cover">
+            <span class="pt-cover-label">13:58</span>
+            <svg viewBox="0 0 640 360" role="img" aria-label="团队协作流程视频封面：多人头像与流程节点">
+              <rect width="640" height="360" fill="#1d3b52"/>
+              <circle cx="150" cy="130" r="30" fill="#12b8a6"/>
+              <circle cx="300" cy="100" r="26" fill="#b6f36b"/>
+              <circle cx="450" cy="136" r="32" fill="#f0a92b"/>
+              <path d="M180 132h94M326 106h96" stroke="#ffffff" stroke-width="3" opacity="0.35" stroke-dasharray="6 8"/>
+              <rect x="110" y="214" width="420" height="76" rx="14" fill="#0d1b2a" opacity="0.7"/>
+              <g fill="#4ad4c2">
+                <circle cx="160" cy="252" r="9"/><circle cx="240" cy="252" r="9"/><circle cx="320" cy="252" r="9"/><circle cx="400" cy="252" r="9"/><circle cx="480" cy="252" r="9"/>
+              </g>
+            </svg>
+            <div class="pt-cover-tri"></div>
+          </div>
+          <div class="pt-card-body">
+            <div class="pt-tags"><span class="pt-tag">高效办公</span></div>
+            <h3 class="pt-card-title">团队共享资料时，如何避免版本各自为政</h3>
+            <p class="pt-card-desc">用统一的命名与留痕规则，减少沟通成本与返工。</p>
+            <div class="pt-card-meta"><span class="pt-mini-avatarset">协</span><span>协作笔记</span><span>·</span><span>5120 次浏览</span></div>
+            <div class="pt-actions">
+              <button class="pt-act" data-pt-like type="button"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6C19 15.6 12 20 12 20z"/></svg><span data-pt-like-count>405</span></button>
+              <button class="pt-act" data-pt-save type="button"><svg viewBox="0 0 24 24"><path d="M6 4h12v17l-6-4-6 4z"/></svg>收藏</button>
+              <button class="pt-act" data-pt-comment type="button"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>评论</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="pt-card" data-pt-cat="create">
+          <div class="pt-cover">
+            <span class="pt-cover-label">09:07</span>
+            <svg viewBox="0 0 640 360" role="img" aria-label="脚本灵感工作流封面：便签与镜头分镜框">
+              <rect width="640" height="360" fill="#3a2a1c"/>
+              <g>
+                <rect x="60" y="70" width="150" height="110" rx="8" fill="#f6d88a" transform="rotate(-4 135 125)"/>
+                <rect x="84" y="96" width="90" height="8" rx="4" fill="#7a5b21" opacity="0.55" transform="rotate(-4 135 125)"/>
+                <rect x="84" y="118" width="70" height="8" rx="4" fill="#7a5b21" opacity="0.4" transform="rotate(-4 135 125)"/>
+              </g>
+              <g>
+                <rect x="240" y="100" width="160" height="90" rx="8" fill="#0d1b2a"/>
+                <rect x="258" y="118" width="124" height="42" rx="5" fill="#4ad4c2" opacity="0.7"/>
+                <rect x="258" y="168" width="80" height="7" rx="3.5" fill="#ffffff" opacity="0.4"/>
+              </g>
+              <rect x="430" y="86" width="156" height="118" rx="8" fill="#f4f7f8"/>
+              <rect x="450" y="108" width="100" height="10" rx="5" fill="#0a8d80"/>
+              <g fill="#0d1b2a" opacity="0.25">
+                <rect x="450" y="132" width="114" height="7" rx="3.5"/>
+                <rect x="450" y="150" width="88" height="7" rx="3.5"/>
+                <rect x="450" y="168" width="104" height="7" rx="3.5"/>
+              </g>
+              <rect x="60" y="236" width="526" height="60" rx="10" fill="#0d1b2a" opacity="0.55"/>
+              <rect x="84" y="256" width="180" height="8" rx="4" fill="#b6f36b"/>
+              <rect x="84" y="274" width="300" height="6" rx="3" fill="#ffffff" opacity="0.3"/>
+            </svg>
+            <div class="pt-cover-tri"></div>
+          </div>
+          <div class="pt-card-body">
+            <div class="pt-tags"><span class="pt-tag">创作场景</span></div>
+            <h3 class="pt-card-title">六种开场结构，让教程视频前三秒就不想划走</h3>
+            <p class="pt-card-desc">从问题切入、结果前置到反常识提问，附可复用的脚本模板。</p>
+            <div class="pt-card-meta"><span class="pt-mini-avatarset">灵</span><span>灵感工坊</span><span>·</span><span>1.05 万次浏览</span></div>
+            <div class="pt-actions">
+              <button class="pt-act" data-pt-like type="button"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.4A4.1 4.1 0 0 1 12 7a4.1 4.1 0 0 1 7 3.6C19 15.6 12 20 12 20z"/></svg><span data-pt-like-count>902</span></button>
+              <button class="pt-act" data-pt-save type="button"><svg viewBox="0 0 24 24"><path d="M6 4h12v17l-6-4-6 4z"/></svg>收藏</button>
+              <button class="pt-act" data-pt-comment type="button"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>评论</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="pt-section" id="ptTopic">
+    <div class="pt-wrap">
+      <div class="pt-section-head">
+        <span class="pt-eyebrow">专题企划</span>
+        <h2 class="pt-h2">三个正在更新的<span class="pt-mark">内容企划</span></h2>
+        <p>由官方发起、创作者共创，围绕传送门下载的不同侧面展开长期观察。</p>
+      </div>
+      <div class="pt-special-grid">
+        <article class="pt-special">
+          <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="480" height="300" fill="#0a4f4a"/>
+            <circle cx="360" cy="80" r="110" fill="#12b8a6" opacity="0.4"/>
+            <path d="M80 220c40-70 100-70 140 0s100 70 140 0" stroke="#b6f36b" stroke-width="6" fill="none" opacity="0.8"/>
+          </svg>
+          <span class="pt-special-state">更新中 · 第 6 期</span>
+          <h3>《跨越边界》冬季影像企划</h3>
+          <p>记录 12 位创作者如何用工具跨越设备与场景的限制，每周更新一支纪录短片。</p>
+        </article>
+        <article class="pt-special">
+          <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="480" height="300" fill="#1b2f45"/>
+            <g fill="#4ad4c2" opacity="0.5">
+              <rect x="60" y="190" width="50" height="60" rx="6"/>
+              <rect x="126" y="150" width="50" height="100" rx="6"/>
+              <rect x="192" y="110" width="50" height="140" rx="6"/>
+              <rect x="258" y="70" width="50" height="180" rx="6"/>
+            </g>
+            <circle cx="380" cy="90" r="42" fill="#b6f36b" opacity="0.8"/>
+          </svg>
+          <span class="pt-special-state">报名开放</span>
+          <h3>「一次配置，长期受益」创作挑战</h3>
+          <p>征集你的高效配置方案，入选作品将进入首页焦点位，并获得官方联合署名。</p>
+        </article>
+        <article class="pt-special">
+          <svg viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="480" height="300" fill="#2c2440"/>
+            <path d="M0 240c80-40 140 20 220-20s160 10 260-30v110H0z" fill="#8b6cf0" opacity="0.5"/>
+            <circle cx="120" cy="100" r="46" fill="#f6d88a" opacity="0.85"/>
+            <circle cx="340" cy="120" r="28" fill="#4ad4c2" opacity="0.75"/>
+          </svg>
+          <span class="pt-special-state">长期企划</span>
+          <h3>真实使用现场：用户故事征集</h3>
+          <p>不追求完美演示，只记录真实场景。你的投稿可能成为下一支官方短片的素材。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者 -->
+  <section class="pt-section pt-creators" id="ptCreator">
+    <div class="pt-wrap">
+      <div class="pt-section-head">
+        <span class="pt-eyebrow">创作者矩阵</span>
+        <h2 class="pt-h2">六位把传送门下载讲清楚的<span class="pt-mark">创作者</span></h2>
+        <p>风格各异，但都坚持一件小事：把复杂的事情讲清楚，把真实的体验写下来。</p>
+      </div>
+      <div class="pt-creator-grid">
+        <article class="pt-creator">
+          <div class="pt-avatar" style="background:linear-gradient(135deg,#12b8a6,#0a5b57)">林</div>
+          <div>
+            <h3>林知远 <i>官方认证</i></h3>
+            <div class="pt-field">入门教学 · 流程拆解</div>
+            <p>前产品经理，擅长把复杂的操作流程拆成可复现的步骤，视频节奏克制、信息密度高。</p>
+            <div class="pt-figs"><span>作品 <b>86</b></span><span>关注 <b>4.2 万</b></span></div>
+          </div>
+        </article>
+        <article class="pt-creator">
+          <div class="pt-avatar" style="background:linear-gradient(135deg,#8b6cf0,#443a75)">苏</div>
+          <div>
+            <h3>苏晚晴 <i>年度作者</i></h3>
+            <div class="pt-field">生活记录 · 场景应用</div>
+            <p>自由摄影师，习惯从日常出发讲工具，她的片子常被评价为“看完就想动手试试”。</p>
+            <div class="pt-figs"><span>作品 <b>54</b></span><span>关注 <b>3.6 万</b></span></div>
+          </div>
+        </article>
+        <article class="pt-creator">
+          <div class="pt-avatar" style="background:linear-gradient(135deg,#f0a92b,#a86b0f)">周</div>
+          <div>
+            <h3>周牧之 <i>测评作者</i></h3>
+            <div class="pt-field">深度测评 · 版本对照</div>
+            <p>工程背景，做对比测评时会列出测试环境与判断依据，结论常被站内引用。</p>
+            <div class="pt-figs"><span>作品 <b>71</b></span><span>关注 <b>5.1 万</b></span></div>
+          </div>
+        </article>
+        <article class="pt-creator">
+          <div class="pt-avatar" style="background:linear-gradient(135deg,#4ad4c2,#1d6d68)">陈</div>
+          <div>
+            <h3>陈一禾 <i>技术顾问</i></h3>
+            <div class="pt-field">安全合规 · 多设备</div>
+            <p>信息安全从业者，强调可验证的方法，反对一切靠感觉的操作习惯。</p>
+            <div class="pt-figs"><span>作品 <b>43</b></span><span>关注 <b>2.8 万</b></span></div>
+          </div>
+        </article>
+        <article class="pt-creator">
+          <div class="pt-avatar" style="background:linear-gradient(135deg,#f6d88a,#b78d34)">何</div>
+          <div>
+            <h3>何小满 <i>新人推荐</i></h3>
+            <div class="pt-field">创作幕后 · 脚本灵感</div>
+            <p>独立剪辑师，分享脚本结构与镜头设计，作品短小但信息完整。</p>
+            <div class="pt-figs"><span>作品 <b>28</b></span><span>关注 <b>1.9 万</b></span></div>
+          </div>
+        </article>
+        <article class="pt-creator">
+          <div class="pt-avatar" style="background:linear-gradient(135deg,#5b8def,#2a4a8f)">江</div>
+          <div>
+            <h3>江屿 <i>社区共建</i></h3>
+            <div class="pt-field">办公效率 · 团队协作</div>
+            <p>企业内训讲师，把团队协作中的共性问题整理成系列短片，评论区互动活跃。</p>
+            <div class="pt-figs"><span>作品 <b>62</b></span><span>关注 <b>3.3 万</b></span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 榜单 -->
+  <section class="pt-section pt-rank" id="ptRank">
+    <div class="pt-wrap">
+      <div class="pt-section-head">
+        <span class="pt-eyebrow">数据榜单</span>
+        <h2 class="pt-h2">本周热度榜与<span class="pt-mark">新人榜</span></h2>
+        <p>基于真实播放、收藏与互动综合计算，每周一更新，榜单仅作内容参考。</p>
+      </div>
+      <div class="pt-rank-grid">
+        <div>
+          <h3 style="font-size:16px;color:#c7f8ef;margin-bottom:14px">热度榜 · 内容</h3>
+          <div class="pt-rank-list">
+            <div class="pt-rank-item"><span class="pt-rank-no">1</span><div class="pt-rank-info"><h4>从来源校验到首次启动：完整流程一次讲透</h4><small>编辑团队 · 入门教程</small></div><span class="pt-rank-val">9.8</span></div>
+            <div class="pt-rank-item"><span class="pt-rank-no">2</span><div class="pt-rank-info"><h4>校验与隐私：辨别来源可靠性的三个动作</h4><small>安全观察 · 安全合规</small></div><span class="pt-rank-val">9.5</span></div>
+            <div class="pt-rank-item"><span class="pt-rank-no">3</span><div class="pt-rank-info"><h4>两个版本怎么选？深度测评与场景对照</h4><small>测评组 · 深度测评</small></div><span class="pt-rank-val">9.3</span></div>
+            <div class="pt-rank-item"><span class="pt-rank-no">4</span><div class="pt-rank-info"><h4>六种开场结构，让教程前三秒不想划走</h4><small>灵感工坊 · 创作场景</small></div><span class="pt-rank-val">9.1</span></div>
+            <div class="pt-rank-item"><span class="pt-rank-no">5</span><div class="pt-rank-info"><h4>三端一致：电脑、平板与手机的同步方案</h4><small>设备派 · 多设备</small></div><span class="pt-rank-val">8.9</span></div>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-size:16px;color:#c7f8ef;margin-bottom:14px">新人榜 · 创作者</h3>
+          <div class="pt-rank-list">
+            <div class="pt-rank-item"><span class="pt-rank-no">1</span><div class="pt-rank-info"><h4>何小满</h4><small>创作幕后 · 近 30 天更新 6 支</small></div><span class="pt-rank-val">↑ 12</span></div>
+            <div class="pt-rank-item"><span class="pt-rank-no">2</span><div class="pt-rank-info"><h4>陆青禾</h4><small>学习场景 · 近 30 天更新 5 支</small></div><span class="pt-rank-val">↑ 9</span></div>
+            <div class="pt-rank-item"><span class="pt-rank-no">3</span><div class="pt-rank-info"><h4>魏来</h4><small>实用技巧 · 近 30 天更新 8 支</small></div><span class="pt-rank-val">↑ 7</span></div>
+            <div class="pt-rank-item"><span class="pt-rank-no">4</span><div class="pt-rank-info"><h4>宋迟</h4><small>城市探索 · 近 30 天更新 4 支</small></div><span class="pt-rank-val">↑ 5</span></div>
+            <div class="pt-rank-item"><span class="pt-rank-no">5</span><div class="pt-rank-info"><h4>顾南枝</h4><small>治愈影像 · 近 30 天更新 3 支</small></div><span class="pt-rank-val">↑ 4</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 评价 -->
+  <section class="pt-section" id="ptVoices">
+    <div class="pt-wrap">
+      <div class="pt-section-head">
+        <span class="pt-eyebrow">社区口碑</span>
+        <h2 class="pt-h2">来自用户的<span class="pt-mark">真实反馈</span></h2>
+        <p>这些评论来自站内不同入口，较长评论已折叠展示，欢迎在评论区补充你的使用经验。</p>
+      </div>
+      <div class="pt-voices-grid">
+        <article class="pt-voice">
+          <div class="pt-stars">★★★★★</div>
+          <p>“最有用的是检查清单那一段，我把三张截图存进手机备忘录，之后每次帮同事处理同类问题都直接调出来用，比在群里反复解释快太多。”</p>
+          <div class="pt-voice-who"><span class="pt-avatar" style="background:#12b8a6">许</span><span>许工 · 运维工程师</span></div>
+        </article>
+        <article class="pt-voice">
+          <div class="pt-stars">★★★★★</div>
+          <p>“看完了多设备那一期，按步骤做确实解决了困扰我半年的同步问题。唯一想提的建议是希望后面补一期平板端的特别说明。”</p>
+          <div class="pt-voice-who"><span class="pt-avatar" style="background:#8b6cf0">郑</span><span>郑同学 · 大学生</span></div>
+        </article>
+        <article class="pt-voice">
+          <div class="pt-stars">★★★★☆</div>
+          <p>“画面干净，没有多余特效，讲解也不拖沓。作为企业内训的补充材料推荐给了团队新人，反馈都还不错。”</p>
+          <div class="pt-voice-who"><span class="pt-avatar" style="background:#f0a92b">江</span><span>江老师 · 企业内训</span></div>
+        </article>
+        <article class="pt-voice">
+          <div class="pt-stars">★★★★★</div>
+          <p>“创作者访谈那期我看了两遍。很少看到有人认真讨论‘怎么把工具讲清楚’这件事，这种内容比炫技更有价值。”</p>
+          <div class="pt-voice-who"><span class="pt-avatar" style="background:#4ad4c2">梅</span><span>梅子 · 自由撰稿人</span></div>
+        </article>
+        <article class="pt-voice">
+          <div class="pt-stars">★★★★☆</div>
+          <p>“安全合规这几期内容很克制，不吓人也不轻描淡写，给的方法都能落地。希望以后多做一点验证思路的延伸。”</p>
+          <div class="pt-voice-who"><span class="pt-avatar" style="background:#5b8def">杜</span><span>杜先生 · 产品经理</span></div>
+        </article>
+        <article class="pt-voice">
+          <div class="pt-stars">★★★★★</div>
+          <p>“新增的标签筛选很好用，我基本只看办公和多设备两个标签，省了不少翻找时间。收藏功能终于派上用场了。”</p>
+          <div class="pt-voice-who"><span class="pt-avatar" style="background:#e0705a">罗</span><span>罗女士 · 行政主管</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 动态 + FAQ -->
+  <section class="pt-section" id="ptNews" style="background:#fff;border-top:1px solid var(--pt-line);border-bottom:1px solid var(--pt-line)">
+    <div class="pt-wrap pt-split">
+      <div>
+        <span class="pt-eyebrow">企业动态</span>
+        <h2 class="pt-h2" style="margin-bottom:24px">官方发布与<span class="pt-mark">更新日志</span></h2>
+        <div class="pt-log">
+          <div class="pt-log-item">
+            <time datetime="2026-11-19">2026-11-19</time>
+            <h4>冬季专题《跨越边界》上线</h4>
+            <p>收录 12 支原创纪录短片，围绕传送门下载在多场景中的实际应用展开，专题页同步开放合集收藏。</p>
+          </div>
+          <div class="pt-log-item">
+            <time datetime="2026-11-16">2026-11-16</time>
+            <h4>创作挑战赛第二季开放报名</h4>
+            <p>本期主题为“一次配置，长期受益”，报名通道已在投稿入口开放，评审团由官方编辑与三位技术顾问组成。</p>
+          </div>
+          <div class="pt-log-item">
+            <time datetime="2026-11-12">2026-11-12</time>
+            <h4>场景教程系列更新至第 9 集</h4>
+            <p>新增多设备协同演示与常见误操作排查，教程页补充了可下载的检查清单，方便用户保存到本地。</p>
+          </div>
+          <div class="pt-log-item">
+            <time datetime="2026-11-05">2026-11-05</time>
+            <h4>站内标签体系完成升级</h4>
+            <p>视频流支持六大标签筛选，创作者主页新增擅长领域字段，帮助用户更快找到风格合适的内容。</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span class="pt-eyebrow">帮助中心</span>
+        <h2 class="pt-h2" style="margin-bottom:24px">常见问题<span class="pt-mark">速查</span></h2>
+        <div class="pt-faq">
+          <details open>
+            <summary>如何判断一支教程是否适用于我的设备？</summary>
+            <p>每支视频的描述区都会标注测试环境与适用条件，如果与你的设备不一致，可以先看评论区是否有类似情况的补充，也可以直接在评论中描述你的系统版本。</p>
+          </details>
+          <details>
+            <summary>收藏的内容保存在哪里？</summary>
+            <p>收藏后内容会归入个人中心的收藏夹，按标签自动分组。你也可以在收藏时添加备注，方便下次快速定位。</p>
+          </details>
+          <details>
+            <summary>投稿有什么格式要求？</summary>
+            <p>建议横屏 16:9、1080p 以上，时长 3 至 25 分钟，需提供一支完整的封面图与 100 字以内简介。涉及第三方素材请注明来源与授权情况。</p>
+          </details>
+          <details>
+            <summary>创作挑战赛的评审标准是什么？</summary>
+            <p>主要看四点：问题是否真实、步骤是否可复现、表达是否清晰、是否尊重他人版权。技术难度不是唯一标准。</p>
+          </details>
+          <details>
+            <summary>可以申请成为官方认证创作者吗？</summary>
+            <p>可以。持续更新且内容质量稳定的作者可在个人中心提交认证申请，审核周期通常为 7 个工作日，通过后主页会展示认证标识。</p>
+          </details>
+          <details>
+            <summary>内容出现错误如何反馈？</summary>
+            <p>每支视频下方都有反馈入口，选择“内容纠错”并描述具体问题即可。编辑团队会在核实后更新说明，并在更新日志中记录。</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 合作伙伴 -->
+  <section class="pt-section pt-partners">
+    <div class="pt-wrap">
+      <div class="pt-section-head">
+        <span class="pt-eyebrow">合作伙伴</span>
+        <h2 class="pt-h2">与我们一起打磨<span class="pt-mark">内容品质</span></h2>
+      </div>
+      <div class="pt-partner-row">
+        <div class="pt-partner">星河云课堂</div>
+        <div class="pt-partner">极简办公社</div>
+        <div class="pt-partner">影像手记联盟</div>
+        <div class="pt-partner">安全观察站</div>
+        <div class="pt-partner">城市记录计划</div>
+        <div class="pt-partner">创作者共进会</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section class="pt-section" id="ptContact">
+    <div class="pt-wrap">
+      <div class="pt-contact">
+        <h2>联系传送门下载官方团队</h2>
+        <p>无论是内容合作、创作者认证，还是对官网内容的建议与纠错，我们都欢迎你直接联系。官方团队会在工作日 24 小时内回复。</p>
+        <div class="pt-contact-grid">
+          <div>
+            <div class="pt-contact-actions">
+              <button class="pt-btn pt-btn-lime" id="ptSubmitBtn" type="button">投稿 / 报名入口</button>
+              <button class="pt-btn pt-btn-line" id="ptShareBtn" type="button">分享本站</button>
+              <button class="pt-btn pt-btn-line" id="ptReportBtn" type="button">反馈与举报</button>
+            </div>
+            <div class="pt-contact-info" style="margin-top:24px">
+              <div><b>商务合作：</b>brand@chuansongmen.example</div>
+              <div><b>内容投稿：</b>studio@chuansongmen.example</div>
+              <div><b>办公地址：</b>城市创意园 B 座 9 层内容中心</div>
+              <div><b>服务时间：</b>周一至周五 09:30 - 18:30</div>
+            </div>
+          </div>
+          <div>
+            <p style="margin-bottom:10px;color:#d7f0f1;font-weight:700">品牌关键词</p>
+            <div class="pt-pillbox">
+              <span class="pt-pill" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#d7fbf5">传送门下载</span>
+              <span class="pt-pill" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#d7fbf5">官方网站</span>
+              <span class="pt-pill" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#d7fbf5">原创正版</span>
+              <span class="pt-pill" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#d7fbf5">精品内容</span>
+              <span class="pt-pill" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#d7fbf5">创作者社区</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pt-footer">
+  <div class="pt-wrap">
+    <div class="pt-footer-grid">
+      <div>
+        <div class="pt-logo"><span class="pt-logo-mark">P</span><span>传送门下载</span></div>
+        <p>传送门下载官方网站，专注于工具获取与使用场景的原创视频内容平台。我们以专业、真实、克制的表达，为创作者与企业搭建高品质内容生态，持续运营，值得信赖。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#ptFocus">焦点内容</a></li>
+          <li><a href="#ptStream">热门视频流</a></li>
+          <li><a href="#ptTopic">专题企划</a></li>
+          <li><a href="#ptRank">数据榜单</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于品牌</h4>
+        <ul>
+          <li><a href="#ptAbout">品牌深度解析</a></li>
+          <li><a href="#ptCreator">创作者矩阵</a></li>
+          <li><a href="#ptNews">企业动态</a></li>
+          <li><a href="#ptVoices">社区口碑</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>帮助与联系</h4>
+        <ul>
+          <li><a href="#ptNews">常见问题</a></li>
+          <li><a href="#ptContact">投稿入口</a></li>
+          <li><a href="#ptContact">商务合作</a></li>
+          <li><a href="#ptContact">反馈与举报</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-footer-bottom">
+      <span>© 2026 传送门下载 官方网站 · 版权所有 · 持续运营中</span>
+      <span>内容备案号：CSM-2026-1108 · 品牌内容由官方团队与入驻创作者共同维护</span>
+    </div>
+  </div>
+</footer>
+
+<button class="pt-top" id="ptToTop" type="button" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<div class="pt-toast" id="ptToast" role="status" aria-live="polite"></div>
+
+<div class="pt-modal" id="ptModal">
+  <div class="pt-modal-box" role="dialog" aria-modal="true" aria-labelledby="ptModalTitle">
+    <h3 id="ptModalTitle">投稿 / 报名</h3>
+    <p id="ptModalDesc">填写你的作品名称与联系方式，官方编辑会在 3 个工作日内与你联系。</p>
+    <input class="pt-modal-field" id="ptModalWork" type="text" placeholder="作品名称，例如：我的传送门下载工作流">
+    <input class="pt-modal-field" id="ptModalContact" type="text" placeholder="联系方式，例如：邮箱或常用社交账号">
+    <div class="pt-modal-row">
+      <button class="pt-btn pt-btn-ghost" data-pt-close type="button">取消</button>
+      <button class="pt-btn pt-btn-main" data-pt-send type="button">提交</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('ptToast');
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-on');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-on'); }, 2200);
+  }
+
+  /* 移动端导航 */
+  var burger = document.getElementById('ptBurger');
+  var mobileNav = document.getElementById('ptMobileNav');
+  burger.addEventListener('click', function(){
+    var open = mobileNav.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mobileNav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      mobileNav.classList.remove('is-open');
+      burger.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById('ptSearchInput');
+  var searchBtn = document.getElementById('ptSearchBtn');
+  var searchTip = document.getElementById('ptSearchTip');
+  var tipTimer = null;
+  var suggestMap = [
+    {keys:['入门','新手','基础','流程'], tip:'入门教程：建议先看《从来源校验到首次启动：完整流程一次讲透》'},
+    {keys:['安全','校验','隐私','合规'], tip:'安全合规：推荐《校验与隐私：辨别来源可靠性的三个可操作动作》'},
+    {keys:['设备','同步','平板','手机'], tip:'多设备：推荐《三端一致：电脑、平板与手机的配置同步方案》'},
+    {keys:['办公','效率','团队','协作'], tip:'高效办公：推荐《团队共享资料时，如何避免版本各自为政》'},
+    {keys:['创作','剪辑','脚本','素材'], tip:'创作场景：推荐《素材下载之后：一支短片从整理到成片的四步》'},
+    {keys:['测评','版本','对比','选择'], tip:'深度测评：推荐《两个版本怎么选？深度测评与适用场景对照》'}
+  ];
+  function showTip(text){
+    searchTip.textContent = text;
+    searchTip.classList.add('is-on');
+    clearTimeout(tipTimer);
+    tipTimer = setTimeout(function(){ searchTip.classList.remove('is-on'); }, 3600);
+  }
+  function doSearch(){
+    var q = (searchInput.value || '').trim();
+    if(!q){
+      showTip('请输入关键词，例如：入门、安全、多设备、创作');
+      return;
+    }
+    var hit = null;
+    for(var i=0;i<suggestMap.length;i++){
+      var s = suggestMap[i];
+      for(var j=0;j<s.keys.length;j++){
+        if(q.indexOf(s.keys[j]) > -1){ hit = s; break; }
+      }
+      if(hit) break;
+    }
+    if(hit){
+      showTip(hit.tip);
+      toast('已为你匹配相关标签内容');
+      var chip = document.querySelector('.pt-chip[data-pt-filter="all"]');
+      if(chip){ chip.click(); }
+      document.getElementById('ptStream').scrollIntoView({behavior:'smooth', block:'start'});
+    }else{
+      showTip('暂未找到与「' + q + '」直接对应的内容，试试：入门、安全、多设备');
+    }
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+  });
+
+  /* 数字滚动 */
+  var counters = document.querySelectorAll('[data-pt-count]');
+  function animateCount(el){
+    var target = parseInt(el.getAttribute('data-pt-count'), 10);
+    var suffix = el.querySelector('span') ? el.querySelector('span').outerHTML : '';
+    var cur = 0;
+    var step = Math.max(1, Math.ceil(target / 48));
+    var timer = setInterval(function(){
+      cur += step;
+      if(cur >= target){
+        cur = target;
+        clearInterval(timer);
+      }
+      var txt;
+      if(target >= 10000){
+        txt = (cur / 10000).toFixed(1).replace('.0','') + ' 万+';
+      }else{
+        txt = String(cur);
+      }
+      el.innerHTML = txt + (suffix && target < 10000 ? suffix : '');
+    }, 28);
+  }
+  var counted = false;
+  function checkCounters(){
+    if(counted) return;
+    var first = counters[0];
+    if(!first) return;
+    var rect = first.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 40){
+      counted = true;
+      counters.forEach(animateCount);
+    }
+  }
+  window.addEventListener('scroll', checkCounters, {passive:true});
+  checkCounters();
+
+  /* 点赞 */
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('[data-pt-like]');
+    if(likeBtn){
+      var cntEl = likeBtn.querySelector('[data-pt-like-count]');
+      var num = parseInt(cntEl.textContent.replace(/[^\d]/g,''), 10) || 0;
+      var liked = likeBtn.classList.toggle('is-liked');
+      cntEl.textContent = liked ? num + 1 : Math.max(0, num - 1);
+      likeBtn.setAttribute('aria-pressed', liked ? 'true' : 'false');
+      toast(liked ? '已点赞，感谢支持原创内容' : '已取消点赞');
+      return;
+    }
+    var saveBtn = e.target.closest('[data-pt-save]');
+    if(saveBtn){
+      var saved = saveBtn.classList.toggle('is-saved');
+      saveBtn.setAttribute('aria-pressed', saved ? 'true' : 'false');
+      saveBtn.lastChild.textContent = saved ? ' 已收藏' : ' 收藏';
+      toast(saved ? '已加入收藏夹，可在个人中心查看' : '已取消收藏');
+      return;
+    }
+    var cmtBtn = e.target.closest('[data-pt-comment]');
+    if(cmtBtn){
+      toast('评论区已开放，登录后可参与讨论');
+      return;
+    }
+    var copyBtn = e.target.closest('[data-pt-copy]');
+    if(copyBtn){
+      var link = window.location.href.split('#')[0] + '#ptFocus';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(link).then(function(){ toast('链接已复制到剪贴板'); }, function(){ toast('复制失败，请手动复制地址'); });
+      }else{
+        toast('链接已生成：' + link);
+      }
+      return;
+    }
+  });
+
+  /* 标签筛选 */
+  var filterWrap = document.getElementById('ptFilter');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#ptVideoGrid [data-pt-cat]'));
+  filterWrap.addEventListener('click', function(e){
+    var chip = e.target.closest('[data-pt-filter]');
+    if(!chip) return;
+    var cat = chip.getAttribute('data-pt-filter');
+    filterWrap.querySelectorAll('.pt-chip').forEach(function(c){
+      c.classList.remove('is-active');
+      c.setAttribute('aria-selected','false');
+    });
+    chip.classList.add('is-active');
+    chip.setAttribute('aria-selected','true');
+    var shown = 0;
+    cards.forEach(function(card){
+      var ok = (cat === 'all') || (card.getAttribute('data-pt-cat') === cat);
+      card.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    if(cat !== 'all'){ toast('已筛选出 ' + shown + ' 支相关内容'); }
+  });
+
+  /* 复制分享 */
+  function sharePage(){
+    var link = window.location.href.split('#')[0];
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(link).then(function(){ toast('分享链接已复制，可粘贴给好友'); }, function(){ toast('请手动复制浏览器地址分享'); });
+    }else{
+      toast('请手动复制浏览器地址分享');
+    }
+  }
+  document.getElementById('ptShareBtn').addEventListener('click', sharePage);
+  document.getElementById('ptShareTop').addEventListener('click', sharePage);
+
+  /* 弹窗 */
+  var modal = document.getElementById('ptModal');
+  var modalTitle = document.getElementById('ptModalTitle');
+  var modalDesc = document.getElementById('ptModalDesc');
+  function openModal(title, desc){
+    modalTitle.textContent = title;
+    modalDesc.textContent = desc;
+    modal.classList.add('is-open');
+  }
+  document.getElementById('ptSubmitBtn').addEventListener('click', function(){
+    openModal('投稿 / 报名', '填写你的作品名称与联系方式，官方编辑会在 3 个工作日内与你联系。');
+  });
+  document.getElementById('ptReportBtn').addEventListener('click', function(){
+    openModal('反馈与举报', '请简要说明问题内容与所在位置，我们会尽快核实处理，并对你的信息严格保密。');
+  });
+  modal.addEventListener('click', function(e){
+    if(e.target === modal || e.target.closest('[data-pt-close]')){
+      modal.classList.remove('is-open');
+    }
+    if(e.target.closest('[data-pt-send]')){
+      var w = document.getElementById('ptModalWork').value.trim();
+      var c = document.getElementById('ptModalContact').value.trim();
+      if(!w || !c){
+        toast('请填写作品名称与联系方式');
+        return;
+      }
+      modal.classList.remove('is-open');
+      document.getElementById('ptModalWork').value = '';
+      document.getElementById('ptModalContact').value = '';
+      toast('已提交，感谢你的参与');
+    }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ modal.classList.remove('is-open'); }
+  });
+
+  /* 回到顶部 */
+  var toTop = document.getElementById('ptToTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520){ toTop.classList.add('is-show'); }
+    else{ toTop.classList.remove('is-show'); }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+                  </html>
